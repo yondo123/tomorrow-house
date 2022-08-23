@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap');
+@import './constants/colors';
 @import './base/fonts';
 @import './base/normalize';
 @import './base/style';
-
-* {
-    font-family: 'Noto Sans KR', sans-serif;
-}
-
-p {
-    color: #000ef0;
-}
