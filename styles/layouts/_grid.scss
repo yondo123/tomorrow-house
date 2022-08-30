@@ -1,0 +1,84 @@
+/* 
+    fixture : sm
+    Mobile  : 768px
+    columns : 4
+    gutter   : 20px
+    container : 100% - (5px * 2)
+    ------------------------------
+    Tablet  : 768px ~ 1200px~
+    fixture : md
+    colums  : 12
+    gutter  : 30px
+    container: 100% - (30px *2)
+    max-width : 960px
+    ------------------------------
+    Desktom : 1200px~
+    fixture : lg
+    coluumns: 12
+    gutter  : 75px
+    unit    : 75px
+    container : 1140px
+    max-width : 1140px
+    margin : auto
+*/
+
+$gutter: 20px;
+
+$sm-cols: 4;
+$sm-margin: 5px;
+
+$md-breakpoint: 768px;
+$md-cols: 12;
+$md-margin: 30px;
+$md-max-container: 960px + $md-margin * 2;
+
+$lg-breakpoint: 1200px;
+$lg-cols: 12;
+$lg-unit: 75px;
+$lg-max-container: ($lg-unit + $gutter) * $lg-cols; //1140px
+
+.container {
+    width: 100%;
+    padding: 0 $sm-margin;
+    margin: 0 auto;
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    //col-sm, col-md, col-lg
+    [class^='col-'] {
+        padding: 0 $gutter / 2;
+    }
+
+    @for $item from 1 through $sm-cols {
+        .col-sm-#{$item} {
+            width: percentage($item / $sm-cols);
+        }
+    }
+
+    //tablet
+    @media screen and (min-width: $md-breakpoint) {
+        max-width: $md-max-container;
+        padding: 0 $md-margin;
+
+        @for $item from 1 through $md-cols {
+            .col-md-#{$item} {
+                width: percentage($item / $md-cols);
+            }
+        }
+    }
+
+    //desktop
+    @media screen and (min-width: $lg-breakpoint) {
+        max-width: $lg-max-container;
+        padding: 0;
+
+        @for $item from 1 through $lg-cols {
+            .col-md-#{$item} {
+                width: ($lg-unit + $gutter) * $item;
+            }
+        }
+    }
+}
