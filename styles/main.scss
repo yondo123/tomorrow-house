@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap');
 @import './constants/typography';
 @import './constants/colors';
+@import './constants/breakpoints';
 @import './base/fonts';
 @import './base/normalize';
 @import './base/style';
 
 @import './mixins/text-style';
+@import './mixins/responsive';
 
 @import './layouts/grid';
