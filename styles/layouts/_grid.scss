@@ -27,12 +27,10 @@ $gutter: 20px;
 $sm-cols: 4;
 $sm-margin: 5px;
 
-$md-breakpoint: 768px;
 $md-cols: 12;
 $md-margin: 30px;
 $md-max-container: 960px + $md-margin * 2;
 
-$lg-breakpoint: 1200px;
 $lg-cols: 12;
 $lg-unit: 75px;
 $lg-max-container: ($lg-unit + $gutter) * $lg-cols; //1140px
@@ -59,7 +57,7 @@ $lg-max-container: ($lg-unit + $gutter) * $lg-cols; //1140px
     }
 
     //tablet
-    @media screen and (min-width: $md-breakpoint) {
+    @include responsive(Tablet) {
         max-width: $md-max-container;
         padding: 0 $md-margin;
 
@@ -69,9 +67,8 @@ $lg-max-container: ($lg-unit + $gutter) * $lg-cols; //1140px
             }
         }
     }
-
     //desktop
-    @media screen and (min-width: $lg-breakpoint) {
+    @include responsive(Desktop) {
         max-width: $lg-max-container;
         padding: 0;
 
