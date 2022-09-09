@@ -1,13 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap');
+//공통 상수
 @import './constants/typography';
 @import './constants/colors';
 @import './constants/breakpoints';
+//폰트 및 초기화
 @import './base/fonts';
 @import './base/normalize';
 @import './base/style';
-
+//mixin
 @import './mixins/text-style';
 @import './mixins/responsive';
 @import './mixins/positions';
 @import './mixins/flexbox';
+//grid
 @import './layouts/grid';
+//컴포넌트 모듈
+@import './modules/tag';
+@import './modules/avatar';
+@import './modules/star-rating';
