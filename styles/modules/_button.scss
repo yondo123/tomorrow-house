@@ -15,6 +15,7 @@
     @extend %button-base;
     color: $white;
     background-color: $blue;
+    transition: background-color 200ms ease-in-out;
 
     &:hover {
         background-color: $blue-dark;
@@ -29,6 +30,7 @@
     @extend %button-base;
     color: $black;
     background-color: $secondary;
+    transition: background-color 200ms ease-in-out;
 
     &:hover {
         background-color: $tertiary;
@@ -43,6 +45,7 @@
     @extend %button-base;
     color: $blue;
     border: 1px solid $blue;
+    transition: background-color 200ms ease-in-out;
 
     &:hover {
         background-color: $blue-light;
@@ -57,6 +60,7 @@
     @extend %button-base;
     color: $primary;
     background-color: transparent;
+    transition: color 200ms ease-in-out;
 
     &:hover {
         color: $secondary;
