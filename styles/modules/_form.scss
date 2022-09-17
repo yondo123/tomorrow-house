@@ -1,0 +1,83 @@
+%form-base {
+    @include text-style(16, $primary);
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 0 16px;
+    background-color: $white;
+    border: 1px solid $border;
+    border-radius: 4px;
+    transition: background-color 200ms ease-in-out;
+    appearance: none;
+
+    &::placeholder {
+        color: $tertiary;
+    }
+
+    //disabled 상태 아닌 요소들만 적용
+    &:not(:disabled):hover {
+        cursor: pointer;
+        background-color: $background;
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.4;
+    }
+}
+
+select,
+input {
+    @extend %form-base;
+}
+
+//select
+.form-select,
+.form-input {
+    @extend %form-base;
+}
+
+.select-area {
+    position: relative;
+
+    //활성화 (우선선택)
+    &.active {
+        .form-select {
+            border-color: $blue;
+        }
+
+        .ic-chevron {
+            color: $blue;
+        }
+    }
+
+    .form-select {
+        padding-right: 40px;
+        text-overflow: ellipsis;
+    }
+
+    .ic-chevron {
+        @include position-center-y;
+        right: 8px;
+        font-size: 24px;
+        color: $tertiary;
+        pointer-events: none;
+    }
+}
+
+//input
+.input-area {
+    position: relative;
+
+    .form-input {
+        padding-left: 40px;
+    }
+
+    .ic-search {
+        @include position-center-y;
+        left: 10px;
+        font-size: 20px;
+        color: $secondary;
+        pointer-events: none;
+    }
+}
