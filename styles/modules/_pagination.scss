@@ -1,0 +1,72 @@
+%page-item {
+    @include inline-flexbox;
+    @include text-style(16, $primary);
+    height: 26px;
+    font-weight: 700;
+    background-color: $white;
+    border-radius: 4px;
+}
+
+.pagination {
+    @include flexbox;
+
+    .page-control {
+        @extend %page-item;
+        width: 26px;
+        border: 1px solid $border;
+
+        &.page-prev {
+            .ic-chevron {
+                transform: rotate(90deg);
+            }
+        }
+
+        &.page-next {
+            .ic-chevron {
+                transform: rotate(-90deg);
+            }
+        }
+
+        &:hover {
+            opacity: 0.4;
+        }
+
+        .ic-chevron {
+            font-size: 20px;
+        }
+    }
+
+    .page-list {
+        list-style: none;
+        @include flexbox;
+    }
+
+    .page-item {
+        margin-right: 4px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &.active {
+            a,
+            button {
+                &:hover {
+                    color: $white !important;
+                    background-color: $blue;
+                }
+            }
+        }
+
+        a,
+        button {
+            @extend %page-item;
+            min-width: 26px;
+            padding: 0 4px;
+
+            &:hover {
+                color: $blue;
+            }
+        }
+    }
+}
