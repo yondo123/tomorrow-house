@@ -17,55 +17,65 @@
 </head>
 
 <body>
-    <header>
-        <h1>
-            <a href="#"><img src="./assets/images/Logo.svg" alt="내일의집"></a>
-        </h1>
+    <header class="gnb">
+        <div class="container">
+            <h1 class="logo">
+                <a href="#"><img src="./assets/images/Logo.svg" alt="내일의집"></a>
+            </h1>
+            <div class="row">
+                <div class="col-sm-4 ">
+                    <div class="gnb-left">
+                        <nav class="gnb-nav sm-hidden">
+                            <h1 class="visually-hidden">menu</h1>
+                            <ul class="gnb-nav-list">
+                                <li class="gnb-nav-item"><a href="#">커뮤니티</a></li>
+                                <li class="gnb-nav-item"><a href="#">스토어</a></li>
+                                <li class="gnb-nav-item"><a href="#">인테리어 시공</a></li>
+                            </ul>
+                        </nav>
 
-        <nav class="sm-hidden">
-            <h1 class="visually-hidden">menu</h1>
-            <ul>
-                <li><a href="#">커뮤니티</a></li>
-                <li><a href="#">스토어</a></li>
-                <li><a href="#">인테리어 시공</a></li>
-            </ul>
-        </nav>
+                        <button class="btn-icon" type="button" aria-label="메뉴 열기 버튼">
+                            <i class="ic-menu"></i>
+                        </button>
+                    </div>
+                    <div class="gnb-right">
+                        <div class="lg-only input-area">
+                            <input type="text" class="form-input" placeholder="스토어 검색">
+                            <i class="ic-search"></i>
+                        </div>
 
-        <button type="button" aria-label="메뉴 열기 버튼">
-            <i class="ic-menu"></i>
-        </button>
+                        <div class="btn-group">
+                            <button type="lg-hidden button" aria-label="검색창 열기 버튼">
+                                <i class="ic-search"></i>
+                            </button>
 
-        <button type="lg-hidden button" aria-label="검색창 열기 버튼">
-            <i class="ic-search"></i>
-        </button>
 
-        <div class="lg-only input-area">
-            <input type="text" class="form-input" placeholder="스토어 검색">
-            <i class="ic-search"></i>
-        </div>
+                            <a class="sm-hidden btn-icon" href="#">
+                                <i class="ic-bookmark" aria-label="스크랩 이동"></i>
+                            </a>
 
-        <a class="sm-hidden" href="#">
-            <i class="ic-bookmark" aria-label="스크랩 이동"></i>
-        </a>
+                            <a class="sm-hidden btn-icon" href="#">
+                                <i class="ic-bell" aria-label="내소식 이동"></i>
+                            </a>
 
-        <a class="sm-hidden" href="#">
-            <i class="ic-bell" aria-label="내소식 이동"></i>
-        </a>
+                            <a class="sm-hidden btn-icon" href="#">
+                                <i class="ic-cart" aria-label="장바구니 이동"></i>
+                            </a>
 
-        <a class="sm-hidden" href="#">
-            <i class="ic-cart" aria-label="장바구니 이동"></i>
-        </a>
-
-        <button class="sm-hidden" type="button" aria-label="마이 메뉴">
-            <div class="avatar-32">
-                <img src="./assets/images/img-user-01.jpg" alt="profile">
+                            <button class="sm-hidden btn-avatar" type="button" aria-label="마이 메뉴">
+                                <div class="avatar-32">
+                                    <img src="./assets/images/img-user-01.jpg" alt="profile">
+                                </div>
+                            </button>
+                        </div>
+                        <button class="button-fill-primary button-40  sm-hidden" type="button">
+                            글쓰기
+                            <i class="ic-chevron" aria-hidden></i>
+                        </button>
+                    </div>
+                </div>
             </div>
-        </button>
-
-        <button class="button-fill-primary button-40  sm-hidden" type="button">
-            글쓰기
-            <i class="ic-chevron" aria-hidden></i>
-        </button>
+        </div>
     </header>
 </body>
 
