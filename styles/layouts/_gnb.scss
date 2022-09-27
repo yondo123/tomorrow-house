@@ -1,0 +1,48 @@
+.gnb {
+    position: relative;
+    border-bottom: 1px solid $border;
+
+    //gnb-right
+    &-right {
+        .btn-group {
+            @include flexbox(end);
+        }
+    }
+
+    &-wrapper {
+        @include flexbox(between);
+        height: 50px;
+    }
+
+    .btn-icon {
+        @include flexbox;
+        width: 32px;
+        height: 32px;
+        font-size: 24px;
+        color: $secondary;
+    }
+
+    //메뉴열기 버튼
+    .btn-menu {
+        color: $blue;
+    }
+
+    //검색버튼
+    .btn-search {
+        margin-right: 4px;
+    }
+
+    .logo {
+        @include position-center;
+
+        a {
+            display: block;
+        }
+
+        img {
+            display: block;
+            width: auto;
+            height: 20px;
+        }
+    }
+}

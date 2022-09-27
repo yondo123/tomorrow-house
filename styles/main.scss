@@ -13,8 +13,9 @@
 @import './mixins/responsive';
 @import './mixins/positions';
 @import './mixins/flexbox';
-//grid
+//layout
 @import './layouts/grid';
+@import './layouts/gnb';
 //컴포넌트 모듈
 @import './modules/tag';
 @import './modules/avatar';
