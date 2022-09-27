@@ -17,7 +17,7 @@
 }
 
 //가로,세로 모두 가운데 정렬
-@mixin position-center($type) {
+@mixin position-center($type: absolute) {
     @if ($type == absolute or $type == fixed) {
         position: $type;
         top: 50%;
