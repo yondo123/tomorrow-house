@@ -42,7 +42,46 @@
         img {
             display: block;
             width: auto;
-            height: 20px;
+            height: 24px;
+        }
+    }
+
+    @include responsive(Tablet) {
+        &-wrapper {
+            height: 80px;
+        }
+
+        &-right {
+            @include flexbox(end);
+
+            .btn-group {
+                margin-right: 24px;
+
+                .btn-icon {
+                    margin-right: 8px;
+                }
+            }
+        }
+
+        .logo {
+            position: static;
+            margin-right: 32px;
+            transform: none;
+        }
+
+        .button-fill-primary {
+            width: 88px;
+
+            i {
+                margin-left: 4px;
+            }
+        }
+    }
+
+    @include responsive(Desktop) {
+        .input-area {
+            width: 264px;
+            margin-right: 24px;
         }
     }
 }
